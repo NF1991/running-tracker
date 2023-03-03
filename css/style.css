@@ -1,0 +1,86 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  padding: 1rem;
+  background-color: #2d3740;
+  color: #f4f4f4;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main {
+  background-color: #1c262f;
+  padding: 1rem;
+}
+
+.logo {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+input[type="number"] {
+  font-family: inherit;
+  background-color: #f4f4f4;
+  width: 80%;
+  margin: 1rem 0;
+  padding: 0.8rem 0;
+  border: none;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+button {
+  font-weight: inherit;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  background-color: #39ff13;
+  margin: 0.5rem 0 1rem 0;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+li {
+  border: 1px solid;
+  padding: 1rem 1.5rem;
+}
+
+.entriesContainer {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+}
+
+.entriesContainer h3 {
+  margin: 0;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.data {
+  font-size: 1.4rem;
+}
+
+.data div {
+  background-color: #141c22;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+}
