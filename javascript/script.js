@@ -1,5 +1,7 @@
+const goal = 25;
 // Empty array to store entries
 let entries = [];
+document.querySelector("#target").innerText = goal;
 
 const entriesContainer = document.querySelector("#entries");
 
@@ -27,6 +29,21 @@ const calcAverage = () => {
   document.getElementById("average").innerText = average;
 };
 
+const weeklyHigh = () => {
+  const high = Math.max(...entries);
+  document.getElementById("high").innerText = high;
+};
+
+const calcGoal = () => {
+  const totalValue = entries.reduce(reducer).toFixed(1);
+  const completedPercent = totalValue / (goal / 100);
+  const progessCircle = document.querySelector("#progressCircle");
+  if (completedPercent > 100) {
+    completedPercent === 100;
+  }
+  progessCircle.style.background = `conic-gradient(#70db70 ${completedPercent}%, #2d3740 ${completedPercent}% 100%)`;
+};
+
 const handleSubmit = (event) => {
   event.preventDefault();
   const entry = Number(document.querySelector("#entry").value);
@@ -38,6 +55,8 @@ const handleSubmit = (event) => {
   addNewEntry(entry);
   calcTotal();
   calcAverage();
+  weeklyHigh();
+  calcGoal();
 };
 
 // Grab elements needed
